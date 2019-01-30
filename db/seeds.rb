@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+#voici des ajout manuel
 course1 = Course.create!(title: "sex", description: "all about practice")
 course2 = Course.create!(title: "bicycle", description: "all about pédale")
 
@@ -17,5 +19,11 @@ lesson3.save
 lesson4 = Lesson.create!(title: "gear does matter?", body: "all about pleasure", course_id: 2)
 
 
+#et la la mitraillette
+10.times do
+  course = Course.create!(title: Faker::App.name, description: Faker::Device.platform)
+end
 
-
+30.times do
+  lesson = Lesson.create!(title: Faker::FamilyGuy.character, body: Faker::NewGirl.quote, course_id: rand(1..12))
+end
